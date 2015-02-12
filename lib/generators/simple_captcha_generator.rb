@@ -1,6 +1,7 @@
 require 'rails/generators'
 
 class SimpleCaptchaGenerator < Rails::Generators::Base
+  argument :template_format, :type => :string, :default => 'erb'
   include Rails::Generators::Migration
 
   def self.source_root
@@ -12,7 +13,7 @@ class SimpleCaptchaGenerator < Rails::Generators::Base
   end
 
   def create_partial
-    template "partial.erb", File.join('app/views', 'simple_captcha', "_simple_captcha.erb")
+    template "partial.#{template_format}", File.join('app/views', 'simple_captcha', "_simple_captcha.#{template_format}")
   end
 
   def create_captcha_migration
