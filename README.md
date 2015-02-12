@@ -44,7 +44,7 @@ and run ``bundle install``.
 After installation, follow these simple steps to setup the plugin. The setup will depend on the version of rails your application is using.
 
 ```bash
-rails generate simple_captcha
+rails generate simple_captcha [template_format] # Available options erb, haml. Default: erb
 rake db:migrate # Mongoid: skip this step and remove the migration
 ```
 
