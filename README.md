@@ -247,15 +247,6 @@ SimpleCaptcha.setup do |sc|
 end
 ```
 
-You can provide the path where should be stored tmp files.
-It's usefull when you dont have acces to /tmp (default directory)
-
-```ruby
-SimpleCaptcha.setup do |sc|
-  sc.tmp_path = '/tmp' # or somewhere in project eg. Rails.root.join('tmp/simple_captcha').to_s, make shure directory exists
-end
-```
-
 
 ### How to change the CSS for SimpleCaptcha DOM elements?
 
