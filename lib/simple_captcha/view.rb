@@ -83,7 +83,7 @@ module SimpleCaptcha #:nodoc
 
       def build_url(options, path)
         if defined?(request) && request
-          "#{request.protocol}#{request.host_with_port}#{ENV['RAILS_RELATIVE_URL_ROOT']}#{path}"
+          "#{Rails.application.default_url_options[:host]}#{ENV['RAILS_RELATIVE_URL_ROOT']}#{path}"
         else
           "#{ENV['RAILS_RELATIVE_URL_ROOT']}#{path}"
         end
